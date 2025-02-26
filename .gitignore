@@ -5,8 +5,12 @@ coverage
 node_modules
 lerna-debug.log
 tsconfig.tsbuildinfo
+tsconfig.esm.tsbuildinfo
 .vscode
 *.off
 docs/src/packages/**/api.json
 packages/**/index.json
 packages/**/typedoc.json
+# Build directories
+packages/**/esm/*
+!packages/**/esm/package.json

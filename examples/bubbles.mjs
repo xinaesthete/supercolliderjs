@@ -1,4 +1,5 @@
-const sc = require("supercolliderjs");
+// const sc = require("supercolliderjs");
+import * as sc from "supercolliderjs";
 
 sc.server.boot().then(async (server) => {
   // should be using await here?

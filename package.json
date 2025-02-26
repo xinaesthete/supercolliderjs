@@ -48,7 +48,7 @@
   "scripts": {
     "postinstall": "npm run bootstrap && npm run build",
     "bootstrap": "lerna bootstrap --hoist",
-    "build": "lerna exec -- tsc -b .",
+    "build": "lerna exec -- tsc -b . && lerna exec --scope supercolliderjs -- tsc -b ./tsconfig.esm.json",
     "test": "npm run jest && npm run lint",
     "jest": "lerna exec -- jest --rootDir=. --config=../jest.config.json --passWithNoTests",
     "lint": "eslint --ext .ts packages/",

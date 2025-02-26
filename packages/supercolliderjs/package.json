@@ -9,7 +9,17 @@
   "homepage": "https://crucialfelix.github.io/supercolliderjs/",
   "license": "MIT",
   "main": "lib/index.js",
+  "module": "esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
   "typings": "lib/index.d.ts",
+  "types": "lib/index.d.ts",
+  "sideEffects": false,
   "directories": {
     "lib": "lib"
   },

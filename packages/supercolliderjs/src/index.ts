@@ -10,7 +10,8 @@ import { mapping as map, msg, resolveOptions } from "@supercollider/server";
 
 const lang = langLib;
 
-module.exports = {
+// Create the combined export object
+const supercolliderjs = {
   server: {
     ...server,
     boot,
@@ -20,8 +21,12 @@ module.exports = {
   lang,
   map,
   msg,
-  // why is this exported separately?
   SCLangError,
-  // @deprecated
   resolveOptions,
 };
+
+// Default export for ESM support
+export default supercolliderjs;
+
+// Named exports for destructuring
+export { server, dryads, lang, map, msg, SCLangError, resolveOptions };
