@@ -52,7 +52,7 @@
     "test": "npm run jest && npm run lint",
     "jest": "lerna exec -- jest --rootDir=. --config=../jest.config.json --passWithNoTests",
     "lint": "eslint --ext .ts packages/",
-    "clean": "lerna exec -- rimraf lib && lerna exec -- rm -f tsconfig.tsbuildinfo",
+    "clean": "lerna exec -- node ../../scripts/clean.js",
     "docs:api": "./tasks/typedocs.sh",
     "docs:md": "node ./tasks/make-docs.js",
     "docs:build": "npm run build && npm run docs:api && npm run docs:export-index && npm run docs:md",

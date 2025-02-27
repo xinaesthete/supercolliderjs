@@ -13,4 +13,4 @@ packages/**/index.json
 packages/**/typedoc.json
 # Build directories
 packages/**/esm/*
-!packages/**/esm/package.json
+!packages/**/src/esm/package.json
