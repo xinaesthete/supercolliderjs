@@ -6,16 +6,16 @@ import { SCLangError } from "@supercollider/lang";
 import { mapping as map, msg, resolveOptions } from "@supercollider/server";
 
 declare const supercolliderjs: {
-    server: typeof server & {
-        boot: typeof boot;
-        server: typeof ServerPlus;
-    };
-    dryads: typeof dryads;
-    lang: typeof langLib;
-    map: typeof map;
-    msg: typeof msg;
-    SCLangError: typeof SCLangError;
-    resolveOptions: typeof resolveOptions;
+  server: typeof server & {
+    boot: typeof boot;
+    server: typeof ServerPlus;
+  };
+  dryads: typeof dryads;
+  lang: typeof langLib;
+  map: typeof map;
+  msg: typeof msg;
+  SCLangError: typeof SCLangError;
+  resolveOptions: typeof resolveOptions;
 };
 
 export default supercolliderjs;
