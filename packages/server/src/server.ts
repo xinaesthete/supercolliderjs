@@ -1,4 +1,6 @@
+//@ts-expect-error 'cannot find module or its corresponding type declarations' - why?
 import Logger from "@supercollider/logger";
+//@ts-expect-error 'cannot find module or its corresponding type declarations' - why?
 import { packBundle, packMessage, unpackMessage } from "@supercollider/osc";
 import { spawn } from "child_process";
 import * as dgram from "dgram";
@@ -366,11 +368,12 @@ export default class Server extends EventEmitter {
           },
         );
 
+      const waitTimeout = 10000;
       setTimeout(() => {
         if (!this.isRunning) {
-          reject(new Error("Server failed to start in 3000ms"));
+          reject(new Error(`Server failed to start in ${waitTimeout}ms`));
         }
-      }, 3000);
+      }, waitTimeout);
     });
   }
 

@@ -2,7 +2,11 @@
 import * as sc from "supercolliderjs";
 
 sc.server.boot().then(async (server) => {
-  // should be using await here?
+  // I think the type of 'server' here should be ServerPlus (or at least Server)
+  // it appears as `sc.server.default` - and `server.synthDef` is `any`...
+  // In reality - it's actually "undefined" at runtime, which is confusing to me 
+  // as I don't know what is so different about the current script vs the past...
+  // we're now using the ESM import, but I thought the actual sc.server.boot() should be doing the same thing...
   const def = await server.synthDef(
     "bubbles",
     `
