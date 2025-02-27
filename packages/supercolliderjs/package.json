@@ -18,7 +18,6 @@
     }
   },
   "typings": "lib/index.d.ts",
-  "types": "lib/index.d.ts",
   "sideEffects": false,
   "directories": {
     "lib": "lib"
