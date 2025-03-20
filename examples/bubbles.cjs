@@ -3,6 +3,7 @@ const sc = require("supercolliderjs");
 sc.server.boot({
   numInputBusChannels: '0'
 }).then(server => {
+  // this has the same problem as bubbles.mjs - server.synthDef is undefined
   const def = server.synthDef(
     "bubbles",
     `
