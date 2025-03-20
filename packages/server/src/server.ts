@@ -366,11 +366,12 @@ export default class Server extends EventEmitter {
           },
         );
 
+      const waitTimeout = 10000;
       setTimeout(() => {
         if (!this.isRunning) {
-          reject(new Error("Server failed to start in 3000ms"));
+          reject(new Error(`Server failed to start in ${waitTimeout}ms`));
         }
-      }, 3000);
+      }, waitTimeout);
     });
   }
 

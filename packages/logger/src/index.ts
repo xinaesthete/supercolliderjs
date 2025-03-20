@@ -91,7 +91,7 @@ export default class Logger {
    */
   stdout(text: any) {
     if (this.echo) {
-      this.print("stdout ", text, colors.stdout);
+      this.print("stdout ", text.toString(), colors.stdout);
     }
   }
 
@@ -100,7 +100,8 @@ export default class Logger {
    */
   stderr(text: any) {
     if (this.echo) {
-      this.print("stderr ", text, colors.stderr);
+      // this text might be a buffer, which will not be decoded correctly downstream
+      this.print("stderr ", text.toString(), colors.stderr);
     }
   }
 
