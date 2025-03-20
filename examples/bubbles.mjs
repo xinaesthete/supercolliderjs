@@ -1,7 +1,10 @@
 // const sc = require("supercolliderjs");
 import * as sc from "supercolliderjs";
 
-sc.server.boot().then(async (server) => {
+sc.server.boot({
+  //ServerArgs ostensibly expects number, but doesn't work if this isn't a string
+  numInputBusChannels: '0' // pending nicer configuration interface, this will more safely boot
+}).then(async (server) => {
   // I think the type of 'server' here should be ServerPlus (or at least Server)
   // it appears as `sc.server.default` - and `server.synthDef` is `any`...
   // In reality - `server.synthDef` is actually `undefined` at runtime, so we fail to do anything useful.

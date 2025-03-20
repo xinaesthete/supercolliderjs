@@ -1,6 +1,4 @@
-//@ts-expect-error 'cannot find module or its corresponding type declarations' - why?
 import Logger from "@supercollider/logger";
-//@ts-expect-error 'cannot find module or its corresponding type declarations' - why?
 import { packBundle, packMessage, unpackMessage } from "@supercollider/osc";
 import { spawn } from "child_process";
 import * as dgram from "dgram";
